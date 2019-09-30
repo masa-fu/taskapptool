@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		124D8914234235D200FA6F03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 124D8913234235D200FA6F03 /* Assets.xcassets */; };
 		124D8917234235D200FA6F03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 124D8915234235D200FA6F03 /* LaunchScreen.storyboard */; };
 		124D891F234239CE00FA6F03 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124D891E234239CE00FA6F03 /* InputViewController.swift */; };
+		124D89212342437C00FA6F03 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124D89202342437C00FA6F03 /* Task.swift */; };
 		1AE231C5294C688D2F968288 /* Pods_taskapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56B5EEE50EA76BF6B6D0AC59 /* Pods_taskapp.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		124D8916234235D200FA6F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		124D8918234235D200FA6F03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		124D891E234239CE00FA6F03 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		124D89202342437C00FA6F03 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		56B5EEE50EA76BF6B6D0AC59 /* Pods_taskapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_taskapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E557B6C4FDFE781C9F80C976 /* Pods-taskapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-taskapp.release.xcconfig"; path = "Target Support Files/Pods-taskapp/Pods-taskapp.release.xcconfig"; sourceTree = "<group>"; };
 		F130C27A6847760DB5948DAF /* Pods-taskapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-taskapp.debug.xcconfig"; path = "Target Support Files/Pods-taskapp/Pods-taskapp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 				124D8915234235D200FA6F03 /* LaunchScreen.storyboard */,
 				124D8918234235D200FA6F03 /* Info.plist */,
 				124D891E234239CE00FA6F03 /* InputViewController.swift */,
+				124D89202342437C00FA6F03 /* Task.swift */,
 			);
 			path = taskapp;
 			sourceTree = "<group>";
@@ -88,7 +91,6 @@
 				F130C27A6847760DB5948DAF /* Pods-taskapp.debug.xcconfig */,
 				E557B6C4FDFE781C9F80C976 /* Pods-taskapp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				124D89212342437C00FA6F03 /* Task.swift in Sources */,
 				124D891F234239CE00FA6F03 /* InputViewController.swift in Sources */,
 				124D890F234235D100FA6F03 /* ViewController.swift in Sources */,
 				124D890D234235D100FA6F03 /* AppDelegate.swift in Sources */,
