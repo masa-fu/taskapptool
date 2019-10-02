@@ -119,28 +119,47 @@
                                     <!--2019-09-30 13:35:40 +0000-->
                                 </date>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWv-lW-vHz">
+                                <rect key="frame" x="10" y="460" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nby-MR-BU9">
+                                <rect key="frame" x="10" y="491" width="394" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="jlF-wg-rep" firstAttribute="top" secondItem="3Kn-FC-F7E" secondAttribute="bottom" constant="10" id="2f8-UV-Myj"/>
                             <constraint firstItem="g6u-FG-1r9" firstAttribute="top" secondItem="jlF-wg-rep" secondAttribute="bottom" constant="10" id="AES-BQ-htw"/>
+                            <constraint firstItem="HWv-lW-vHz" firstAttribute="leading" secondItem="AQ9-Lx-5X6" secondAttribute="leading" constant="10" id="ITo-bE-JXg"/>
                             <constraint firstItem="AQ9-Lx-5X6" firstAttribute="trailing" secondItem="3Kn-FC-F7E" secondAttribute="trailing" constant="10" id="P6B-WV-MFW"/>
+                            <constraint firstItem="AQ9-Lx-5X6" firstAttribute="trailing" secondItem="HWv-lW-vHz" secondAttribute="trailing" constant="10" id="ULG-Cc-kjd"/>
+                            <constraint firstItem="nby-MR-BU9" firstAttribute="top" secondItem="HWv-lW-vHz" secondAttribute="bottom" constant="10" id="WmW-Vq-LVJ"/>
                             <constraint firstItem="AQ9-Lx-5X6" firstAttribute="trailing" secondItem="uPb-MH-hce" secondAttribute="trailing" constant="10" id="XLt-Ti-oll"/>
                             <constraint firstItem="3Kn-FC-F7E" firstAttribute="top" secondItem="uPb-MH-hce" secondAttribute="bottom" constant="10" id="Z25-cS-foi"/>
                             <constraint firstItem="OSd-kW-25t" firstAttribute="leading" secondItem="AQ9-Lx-5X6" secondAttribute="leading" id="a0z-5a-TYw"/>
                             <constraint firstItem="AQ9-Lx-5X6" firstAttribute="trailing" secondItem="g6u-FG-1r9" secondAttribute="trailing" constant="10" id="bhf-Zy-qzw"/>
+                            <constraint firstItem="nby-MR-BU9" firstAttribute="leading" secondItem="AQ9-Lx-5X6" secondAttribute="leading" constant="10" id="d5C-xF-kLB"/>
                             <constraint firstItem="g6u-FG-1r9" firstAttribute="leading" secondItem="AQ9-Lx-5X6" secondAttribute="leading" constant="10" id="dKw-bl-AAe"/>
                             <constraint firstItem="OSd-kW-25t" firstAttribute="trailing" secondItem="AQ9-Lx-5X6" secondAttribute="trailing" id="gni-pt-Uhm"/>
+                            <constraint firstItem="HWv-lW-vHz" firstAttribute="top" secondItem="OSd-kW-25t" secondAttribute="bottom" constant="10" id="mP3-Uc-xHo"/>
                             <constraint firstItem="uPb-MH-hce" firstAttribute="leading" secondItem="AQ9-Lx-5X6" secondAttribute="leading" constant="10" id="ohq-7K-GCe"/>
                             <constraint firstItem="jlF-wg-rep" firstAttribute="leading" secondItem="AQ9-Lx-5X6" secondAttribute="leading" constant="10" id="pDd-ZH-qjx"/>
                             <constraint firstItem="AQ9-Lx-5X6" firstAttribute="trailing" secondItem="jlF-wg-rep" secondAttribute="trailing" constant="10" id="xkg-md-JRb"/>
                             <constraint firstItem="uPb-MH-hce" firstAttribute="top" secondItem="AQ9-Lx-5X6" secondAttribute="top" constant="10" id="y8N-HM-M7w"/>
                             <constraint firstItem="OSd-kW-25t" firstAttribute="top" secondItem="g6u-FG-1r9" secondAttribute="bottom" constant="10" id="yOT-25-FBa"/>
                             <constraint firstItem="3Kn-FC-F7E" firstAttribute="leading" secondItem="AQ9-Lx-5X6" secondAttribute="leading" constant="10" id="yTJ-pb-Wiu"/>
+                            <constraint firstItem="AQ9-Lx-5X6" firstAttribute="trailing" secondItem="nby-MR-BU9" secondAttribute="trailing" constant="10" id="yWb-C4-S64"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AQ9-Lx-5X6"/>
                     </view>
                     <connections>
+                        <outlet property="categoryTextField" destination="nby-MR-BU9" id="qe3-SP-ETa"/>
                         <outlet property="contentsTextView" destination="g6u-FG-1r9" id="ahd-fj-Nns"/>
                         <outlet property="datePicker" destination="OSd-kW-25t" id="xNW-8S-nW2"/>
                         <outlet property="titleTextField" destination="3Kn-FC-F7E" id="bGP-JJ-qpa"/>
