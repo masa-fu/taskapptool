@@ -10,8 +10,9 @@ import UIKit
 import RealmSwift
 import UserNotifications
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
 
     // Realmインスタンスを取得する
     let realm = try! Realm()
@@ -26,6 +27,37 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
         tableView.delegate = self
         tableView.dataSource = self
+
+        searchBar.delegate = self
+        searchBar.showsSearchResultsButton = false
+        searchBar.placeholder = "カテゴリ検索"
+        searchBar.setValue("キャンセル", forKey: "_cancelButtonText")
+    }
+
+    // 検索ボタンが押された時に呼ばれる
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        let result = searchBar.text!
+        // カテゴリで検索
+        // 検索欄に入力された値を検索条件に指定する
+        self.taskArray = realm.objects(Task.self).filter("category=%@", result)
+        self.view.endEditing(true)
+        searchBar.showsCancelButton = true
+        self.tableView.reloadData()
+    }
+
+    // キャンセルボタンが押された時に呼ばれる
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        taskArray = try! Realm().objects(Task.self).sorted(byKeyPath: "date", ascending: false)
+        searchBar.showsCancelButton = false
+        self.view.endEditing(true)
+        searchBar.text = ""
+        self.tableView.reloadData()
+    }
+
+    // テキストフィールド入力開始前に呼ばれる
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.showsCancelButton = true
+        return true
     }
 
     // MARK: UITableViewDataSourceプロトコルのメソッド
